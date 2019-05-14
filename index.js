@@ -17,6 +17,6 @@ bot.onText(/^\/start$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
 })
 
-bot.onText(/^\/help/, msg=> {
+bot.onText(/^\/help$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Помощь')
 })
