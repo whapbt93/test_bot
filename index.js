@@ -7,7 +7,7 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
     res.end('')
 })
-bot.on(/\/start/, msg=> {
+bot.onText(/\/start/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
 /*
 bot.on('message', msg => {
