@@ -20,14 +20,14 @@ bot.onText(/\/start/, msg=> {
 var instr
 
 bot.onText(instr, msg=> {
-    if (instr[0] != '/') {
+    if (instr[0] != '1') {
         bot.sendMessage(msg.chat.id, 'Привет')
     } else {
         switch (instr) {
-            case '/start':
+            case '1start':
                 bot.sendMessage(msg.chat.id, 'Добро пожаловать')
                 break
-            case '/help':
+            case '1help':
                 bot.sendMessage(msg.chat.id, 'Я умею:')
                 break
             default:
