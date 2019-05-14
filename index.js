@@ -16,47 +16,6 @@ bot.onText(/\/start/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
 })
 
-/*
-var instr
-
-bot.onText(instr, msg=> {
-    if (instr[0] != '/') {
-        bot.sendMessage(msg.chat.id, 'Привет')
-    } else {
-        switch (instr) {
-            case '/start':
-                bot.sendMessage(msg.chat.id, 'Добро пожаловать')
-                break
-            case '/help':
-                bot.sendMessage(msg.chat.id, 'Я умею:')
-                break
-            default:
-                bot.sendMessage(msg.chat.id, 'Неизвестная команда')
-        }
-    }
+bot.onText(/\/help/, msg=> {
+    bot.sendMessage(msg.chat.id, 'Помощь')
 })
-*/
-/*
-const instr;
-const outstr;
-
-bot.on(instr, OutMsg(instr));
-
-function OutMsg(instr) {
-    if (instr[0] != '1') {
-        outstr = 'Привет'
-    } else {
-        switch (instr) {
-            case '1start':
-                outstr = 'Добро пожаловать';
-                break;
-            case '1help':
-                outstr = 'Я умею:';
-                break;
-            default:
-                outstr = 'Неизвестная команда';
-        }
-    }
-    bot.sendMessage(msg.chat.id, outstr);
-}
-*/
