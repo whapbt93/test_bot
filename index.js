@@ -12,6 +12,7 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
 bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, 'Привет, ' + msg.from.first_name )
 })*/
+const InStr
 
 bot.onText(/^\/start$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
@@ -19,4 +20,8 @@ bot.onText(/^\/start$/, msg=> {
 
 bot.onText(/^\/help$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Помощь')
+})
+
+bot.on(InStr, msg => {
+    bot.sendMessage(msg.chat.id, 'Текст')
 })
