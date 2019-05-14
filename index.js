@@ -8,10 +8,10 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
     res.end('')
 })
 
-
+/*
 bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, 'Привет, ' + msg.from.first_name )
-})
+})*/
 
 bot.onText(/\/start/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
