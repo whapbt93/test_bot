@@ -20,7 +20,3 @@ bot.onText(/^\/start$/, msg=> {
 bot.onText(/^\/help$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Помощь')
 })
-
-bot.on('message', msg => {
-    bot.sendMessage(msg.chat.id, 'Текст')
-})
