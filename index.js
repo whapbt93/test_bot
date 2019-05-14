@@ -13,7 +13,7 @@ bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, 'Привет, ' + msg.from.first_name )
 })*/
 
-bot.onText(/\/start (.+)/, msg=> {
+bot.onText(/\/start(.+)/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
 })
 
