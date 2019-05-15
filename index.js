@@ -11,7 +11,7 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
 /*
 bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, 'Привет, ' + msg.from.first_name )
-})*/
+})
 
 bot.onText(/^\/start$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Добро пожаловать!')
@@ -20,24 +20,23 @@ bot.onText(/^\/start$/, msg=> {
 bot.onText(/^\/help$/, msg=> {
     bot.sendMessage(msg.chat.id, 'Помощь')
 })
-
+*/
 
 bot.on('text', msg => {
     var InMsg = msg.text
     var OutMsg
     if (InMsg[0] != '/') {
-        OutMsg = 'текст'
+        OutMsg = 'Ваше сообщение: ' + InMsg
     } else {
-        OutMsg = 'команда'
         switch (InMsg) {
             case '/start':
-                OutMsg = 'старт'
+                OutMsg = 'Добро пожаловать'
                 break
             case '/help':
-                OutMsg = 'помощь'
+                OutMsg = 'Вот что я умею:'
                 break
             default:
-                OutMsg = 'другая команда'
+                OutMsg = 'Неизвестная команда'
         }
     }
     bot.sendMessage(msg.chat.id, OutMsg)
