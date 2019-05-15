@@ -23,5 +23,5 @@ bot.onText(/^\/help$/, msg=> {
 
 
 bot.on('text', msg => {
-    bot.sendMessage(msg.chat.id, '123')
+    bot.sendMessage(msg.chat.id, message.text)
 })
