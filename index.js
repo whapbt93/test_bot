@@ -40,5 +40,5 @@ bot.on('text', msg => {
                 OutMsg = 'другая команда'
         }
     }
-    bot.sendMessage(msg.chat.id, '5')
+    bot.sendMessage(msg.chat.id, OutMsg)
 })
