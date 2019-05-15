@@ -23,9 +23,9 @@ bot.onText(/^\/help$/, msg=> {
 
 
 bot.on('text', msg => {
-    const InMsg = msg.text
-    const OutMsg
-    if (InMsg[0] != '/') {
+    var InMsg = msg.text
+    var OutMsg
+    if (InMsg != '/') {
         OutMsg = 'текст'
     } else {
         OutMsg = 'команда'
@@ -40,5 +40,5 @@ bot.on('text', msg => {
                 OutMsg = 'другая команда'
         }
     }
-    bot.sendMessage(msg.chat.id, OutMsg)
+    bot.sendMessage(msg.chat.id, '5')
 })
