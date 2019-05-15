@@ -25,7 +25,7 @@ bot.onText(/^\/help$/, msg=> {
 bot.on('text', msg => {
     var InMsg = msg.text
     var OutMsg
-    if (InMsg != '/') {
+    if (InMsg[0] != '/') {
         OutMsg = 'текст'
     } else {
         OutMsg = 'команда'
