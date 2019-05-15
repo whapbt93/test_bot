@@ -23,5 +23,22 @@ bot.onText(/^\/help$/, msg=> {
 
 
 bot.on('text', msg => {
-    bot.sendMessage(msg.chat.id, msg.text)
+    const InMsg = msg.text
+    const OutMsg
+    if (InMsg[0] != '/') {
+        OutMsg = 'текст'
+    } else {
+        OutMsg = 'команда'
+        switch (InMsg) {
+            case '/start':
+                OutMsg = 'старт'
+                break
+            case '/help':
+                OutMsg = 'помощь'
+                break
+            default:
+                OutMsg = 'другая команда'
+        }
+    }
+    bot.sendMessage(msg.chat.id, OutMsg)
 })
